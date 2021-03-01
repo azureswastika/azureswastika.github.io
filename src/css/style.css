@@ -1,0 +1,14 @@
+.tag {
+  color: #fff;
+  background: #3498db;
+  float: left;
+  padding: 5px 10px;
+  border-radius: 10em;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.tag:hover{
+    cursor: pointer;
+    background: #2277af;
+}
