@@ -3,7 +3,7 @@ const tags = $(".tags");
 const converter = new showdown.Converter();
 
 
-function render_posts(tag = null) {
+function render_posts(tag = null,) {
     $.getJSON("assets/posts.json", function (posts) {
         let tag_arr = []
         container.html("");
@@ -37,4 +37,21 @@ $(document).on('click', '.tag', function () {
     render_posts($(this)[0].innerText)
 });
 
-$(document).ready(render_posts())
+$('#search').keyup(function () {
+    if ($(this).val()) {
+        let posts = $(".post")
+        for (let index = 0; index < posts.length; index++) {
+            const el = posts[index];
+            if (el.textContent.indexOf($(this).val()) == -1) {
+                el.remove();
+            }
+        }
+    } else {
+        render_posts()
+    }
+});
+
+$(document).ready(function () {
+    $("#header").load("src/html/header.html")
+    render_posts()
+});

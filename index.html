@@ -14,7 +14,40 @@
     <title>Index</title>
   </head>
   <body>
-    <div id="header"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarToggle"
+          aria-controls="navbarToggle"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggle">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              id="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </form>
+        </div>
+      </div>
+    </nav>
     <div class="container">
       <div class="row">
         <div class="col-8">
@@ -33,6 +66,5 @@
   ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
-  <script src="src/js/load.js"></script>
   <script src="src/js/index.js"></script>
 </html>
